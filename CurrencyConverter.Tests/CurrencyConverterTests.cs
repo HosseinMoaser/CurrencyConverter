@@ -1,5 +1,7 @@
 ﻿using CurrencyConverter.Exceptions;
 using CurrencyConverter.Models;
+using CurrencyConverter.Services;
+using Microsoft.Extensions.Logging.Abstractions;
 
 namespace CurrencyConverter.Tests;
 
@@ -8,7 +10,7 @@ public class CurrencyConverterTests
     [Fact]
     public void Test_Convert_SameCurrency_Should_Return_Input_Amount()
     {
-        var converter = new CurrencyConverter();
+        var converter = new CurrencyConversionService(NullLogger<CurrencyConversionService>.Instance);
         var pair = new CurrencyPair("USD", "USD", 1);
         var amount = 100;
         var result = converter.Convert(pair, amount);
@@ -18,7 +20,7 @@ public class CurrencyConverterTests
     [Fact]
     public void Test_Convert_DirectConversion_Should_Return_Amount_Multiplied_By_ConversionRate()
     {
-        var converter = new CurrencyConverter();
+        var converter = new CurrencyConversionService(NullLogger<CurrencyConversionService>.Instance);
         converter.UpdateConfiguration(new List<CurrencyPair>
         {
             new CurrencyPair("USD", "EUR", 0.86)
@@ -32,7 +34,7 @@ public class CurrencyConverterTests
     [Fact]
     public void Test_Convert_IndirectConversion_Should_Find_New_Path_For_Conversion()
     {
-        var converter = new CurrencyConverter();
+        var converter = new CurrencyConversionService(NullLogger<CurrencyConversionService>.Instance);
         converter.UpdateConfiguration(new List<CurrencyPair>
         {
             new CurrencyPair("USD", "CAD", 1.34),
@@ -48,7 +50,7 @@ public class CurrencyConverterTests
     [Fact]
     public void Test_Convert_NoConversionPath_Should_Return_ConversionPathNotFoundException()
     {
-        var converter = new CurrencyConverter();
+        var converter = new CurrencyConversionService(NullLogger<CurrencyConversionService>.Instance);
         converter.UpdateConfiguration(new List<CurrencyPair>
         {
             new CurrencyPair("USD", "CAD", 1.34),
@@ -56,7 +58,7 @@ public class CurrencyConverterTests
         });
         var pair = new CurrencyPair("USD", "EUR", 0);
         var amount = 100;
-        Assert.ThrowsAsync<ConversionPathNotFoundException>(() => converter.Convert(pair, amount));
+        Assert.Throws<ConversionPathNotFoundException>(() => converter.Convert(pair, amount));
     }
 
 }

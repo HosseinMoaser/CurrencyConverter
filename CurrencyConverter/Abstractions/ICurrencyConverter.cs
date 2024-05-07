@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CurrencyConverter.Models;
 
-namespace CurrencyConverter.Abstractions
+namespace CurrencyConverter.Abstractions;
+
+public interface ICurrencyConverter
 {
-    internal interface ICurrencyConverter
-    {
-    }
+    void ClearConfiguration();
+    void UpdateConfiguration(IEnumerable<CurrencyPair> conversionRates);
+    double Convert(CurrencyPair currencyPair, double amount);
 }

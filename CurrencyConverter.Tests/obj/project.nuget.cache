@@ -1,11 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "xMfZaKoj60NmvMqLyHgONnjNJq7I5TK9WxanxTQJ5shgRmwKtZaRWrjYoWGYTWwc9SBalQX2maZ50KbGM1npCw==",
+  "dgSpecHash": "E/89KVDdIyJFVKzKJVF2h1yIso5lW1JD+8jORhjUa9XeZ5tRARCgrMyGKAIHQsZ2+9mk8FMtpKeVzaE9q91YcQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\moase\\OneDrive\\Desktop\\CurrencyConverter\\CurrencyConverter\\CurrencyConverter.Tests\\CurrencyConverter.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\moase\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\moase\\.nuget\\packages\\microsoft.codecoverage\\17.6.0\\microsoft.codecoverage.17.6.0.nupkg.sha512",
+    "C:\\Users\\moase\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "C:\\Users\\moase\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\moase\\.nuget\\packages\\microsoft.extensions.logging\\8.0.0\\microsoft.extensions.logging.8.0.0.nupkg.sha512",
+    "C:\\Users\\moase\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\moase\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "C:\\Users\\moase\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "C:\\Users\\moase\\.nuget\\packages\\microsoft.net.test.sdk\\17.6.0\\microsoft.net.test.sdk.17.6.0.nupkg.sha512",
     "C:\\Users\\moase\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\moase\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
